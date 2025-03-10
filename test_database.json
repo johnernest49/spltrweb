@@ -278,7 +278,7 @@
       "notes": ""
     }
   ],
-  "ExpenseShares": [
+  "ExpensesShares": [
     { "expenseShareID": 1, "expenseID": 1, "userID": 1, "shareAmount": 40 },
     { "expenseShareID": 2, "expenseID": 1, "userID": 2, "shareAmount": 40 },
     { "expenseShareID": 3, "expenseID": 1, "userID": 3, "shareAmount": 40 },
