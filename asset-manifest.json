@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spltrweb/static/css/main.de4dec2c.css",
+    "main.js": "/spltrweb/static/js/main.c5008312.js",
+    "index.html": "/spltrweb/index.html",
+    "main.de4dec2c.css.map": "/spltrweb/static/css/main.de4dec2c.css.map",
+    "main.c5008312.js.map": "/spltrweb/static/js/main.c5008312.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de4dec2c.css",
+    "static/js/main.c5008312.js"
+  ]
+}
