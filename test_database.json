@@ -1,1237 +1,477 @@
 {
-  "users": [
+  "Users": [
     {
       "userID": 1,
       "userName": "Alice",
-      "createdAt": "2024-09-01T00:00:00Z"
+      "createdAt": "2024-10-01T00:00:00Z"
     },
     {
       "userID": 2,
       "userName": "Bob",
-      "createdAt": "2024-09-01T00:00:00Z"
+      "createdAt": "2024-10-02T00:00:00Z"
     },
     {
       "userID": 3,
       "userName": "Charlie",
-      "createdAt": "2024-09-01T00:00:00Z"
-    },
-    {
-      "userID": 4,
-      "userName": "Diana",
-      "createdAt": "2024-09-01T00:00:00Z"
-    },
-    {
-      "userID": 5,
-      "userName": "Evan",
-      "createdAt": "2024-09-01T00:00:00Z"
+      "createdAt": "2024-10-03T00:00:00Z"
     }
   ],
-  "groups": [
+  "Groups": [
     {
       "groupID": 1,
-      "groupName": "Trip Buddies",
-      "createdAt": "2024-09-01T00:00:00Z"
+      "groupName": "Group One",
+      "createdAt": "2024-10-10T00:00:00Z"
     },
     {
       "groupID": 2,
-      "groupName": "Office Mates",
-      "createdAt": "2024-09-01T00:00:00Z"
+      "groupName": "Group Two",
+      "createdAt": "2024-10-15T00:00:00Z"
     }
   ],
-  "usersGroups": [
+  "UsersGroups": [
     { "userID": 1, "groupID": 1 },
-    { "userID": 1, "groupID": 2 },
     { "userID": 2, "groupID": 1 },
-    { "userID": 2, "groupID": 2 },
     { "userID": 3, "groupID": 1 },
-    { "userID": 3, "groupID": 2 },
-    { "userID": 4, "groupID": 1 },
-    { "userID": 4, "groupID": 2 },
-    { "userID": 5, "groupID": 1 },
-    { "userID": 5, "groupID": 2 }
+    { "userID": 1, "groupID": 2 },
+    { "userID": 2, "groupID": 2 }
   ],
-  "expenses": [
+  "ExpenseCategories": [
+    { "categoryID": 1, "categoryName": "Food" },
+    { "categoryID": 2, "categoryName": "Transport" },
+    { "categoryID": 3, "categoryName": "Entertainment" },
+    { "categoryID": 4, "categoryName": "Utilities" },
+    { "categoryID": 5, "categoryName": "Misc" }
+  ],
+  "Expenses": [
     {
       "expenseID": 1,
       "groupID": 1,
       "paidBy": 1,
-      "amount": 12,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 1",
-      "expenseDate": "2024-10-01",
-      "notes": "Sample note"
+      "amount": 120,
+      "categoryID": 2,
+      "monthID": 202410,
+      "year": 2023,
+      "month": 1,
+      "description": "Expense for Transport",
+      "expenseDate": "2024-10-15",
+      "notes": ""
     },
     {
       "expenseID": 2,
       "groupID": 1,
       "paidBy": 2,
-      "amount": 14,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 2",
-      "expenseDate": "2024-10-04",
-      "notes": "Sample note"
+      "amount": 75,
+      "categoryID": 4,
+      "monthID": 202410,
+      "year": 2023,
+      "month": 1,
+      "description": "Expense for Utilities",
+      "expenseDate": "2024-10-15",
+      "notes": ""
     },
     {
       "expenseID": 3,
-      "groupID": 1,
-      "paidBy": 3,
-      "amount": 16,
+      "groupID": 2,
+      "paidBy": 1,
+      "amount": 90,
       "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 3",
-      "expenseDate": "2024-10-07",
-      "notes": "Sample note"
+      "monthID": 202410,
+      "year": 2023,
+      "month": 1,
+      "description": "Expense for Food",
+      "expenseDate": "2024-10-15",
+      "notes": ""
     },
     {
       "expenseID": 4,
       "groupID": 1,
-      "paidBy": 4,
-      "amount": 18,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 4",
-      "expenseDate": "2024-10-10",
-      "notes": "Sample note"
+      "paidBy": 1,
+      "amount": 110,
+      "categoryID": 3,
+      "monthID": 202411,
+      "year": 2023,
+      "month": 2,
+      "description": "Expense for Entertainment",
+      "expenseDate": "2024-11-15",
+      "notes": ""
     },
     {
       "expenseID": 5,
       "groupID": 1,
-      "paidBy": 5,
-      "amount": 20,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 5",
-      "expenseDate": "2024-10-13",
-      "notes": "Sample note"
+      "paidBy": 2,
+      "amount": 60,
+      "categoryID": 5,
+      "monthID": 202411,
+      "year": 2023,
+      "month": 2,
+      "description": "Expense for Misc",
+      "expenseDate": "2024-11-15",
+      "notes": ""
     },
     {
       "expenseID": 6,
       "groupID": 2,
-      "paidBy": 1,
-      "amount": 22,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 6",
-      "expenseDate": "2024-10-16",
-      "notes": "Sample note"
+      "paidBy": 2,
+      "amount": 130,
+      "categoryID": 2,
+      "monthID": 202411,
+      "year": 2023,
+      "month": 2,
+      "description": "Expense for Transport",
+      "expenseDate": "2024-11-15",
+      "notes": ""
     },
     {
       "expenseID": 7,
-      "groupID": 2,
+      "groupID": 1,
       "paidBy": 2,
-      "amount": 24,
+      "amount": 95,
       "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 7",
-      "expenseDate": "2024-10-19",
-      "notes": "Sample note"
+      "monthID": 202412,
+      "year": 2023,
+      "month": 3,
+      "description": "Expense for Food",
+      "expenseDate": "2024-12-15",
+      "notes": ""
     },
     {
       "expenseID": 8,
-      "groupID": 2,
+      "groupID": 1,
       "paidBy": 3,
-      "amount": 26,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 8",
-      "expenseDate": "2024-10-22",
-      "notes": "Sample note"
+      "amount": 140,
+      "categoryID": 4,
+      "monthID": 202412,
+      "year": 2023,
+      "month": 3,
+      "description": "Expense for Utilities",
+      "expenseDate": "2024-12-15",
+      "notes": ""
     },
     {
       "expenseID": 9,
       "groupID": 2,
-      "paidBy": 4,
-      "amount": 28,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 9",
-      "expenseDate": "2024-10-25",
-      "notes": "Sample note"
+      "paidBy": 1,
+      "amount": 85,
+      "categoryID": 3,
+      "monthID": 202412,
+      "year": 2023,
+      "month": 3,
+      "description": "Expense for Entertainment",
+      "expenseDate": "2024-12-15",
+      "notes": ""
     },
     {
       "expenseID": 10,
-      "groupID": 2,
-      "paidBy": 5,
-      "amount": 30,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for October 2024 - transaction 10",
-      "expenseDate": "2024-10-28",
-      "notes": "Sample note"
+      "groupID": 1,
+      "paidBy": 2,
+      "amount": 100,
+      "categoryID": 5,
+      "monthID": 202501,
+      "year": 2023,
+      "month": 4,
+      "description": "Expense for Misc",
+      "expenseDate": "2025-01-15",
+      "notes": ""
     },
     {
       "expenseID": 11,
       "groupID": 1,
-      "paidBy": 1,
-      "amount": 32,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 1",
-      "expenseDate": "2024-11-01",
-      "notes": "Sample note"
+      "paidBy": 3,
+      "amount": 150,
+      "categoryID": 2,
+      "monthID": 202501,
+      "year": 2023,
+      "month": 4,
+      "description": "Expense for Transport",
+      "expenseDate": "2025-01-15",
+      "notes": ""
     },
     {
       "expenseID": 12,
-      "groupID": 1,
+      "groupID": 2,
       "paidBy": 2,
-      "amount": 34,
+      "amount": 120,
       "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 2",
-      "expenseDate": "2024-11-04",
-      "notes": "Sample note"
+      "monthID": 202501,
+      "year": 2023,
+      "month": 4,
+      "description": "Expense for Food",
+      "expenseDate": "2025-01-15",
+      "notes": ""
     },
     {
       "expenseID": 13,
       "groupID": 1,
-      "paidBy": 3,
-      "amount": 36,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 3",
-      "expenseDate": "2024-11-07",
-      "notes": "Sample note"
+      "paidBy": 2,
+      "amount": 80,
+      "categoryID": 4,
+      "monthID": 202502,
+      "year": 2023,
+      "month": 5,
+      "description": "Expense for Utilities",
+      "expenseDate": "2025-02-15",
+      "notes": ""
     },
     {
       "expenseID": 14,
       "groupID": 1,
-      "paidBy": 4,
-      "amount": 38,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 4",
-      "expenseDate": "2024-11-10",
-      "notes": "Sample note"
+      "paidBy": 3,
+      "amount": 110,
+      "categoryID": 3,
+      "monthID": 202502,
+      "year": 2023,
+      "month": 5,
+      "description": "Expense for Entertainment",
+      "expenseDate": "2025-02-15",
+      "notes": ""
     },
     {
       "expenseID": 15,
-      "groupID": 1,
-      "paidBy": 5,
-      "amount": 40,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 5",
-      "expenseDate": "2024-11-13",
-      "notes": "Sample note"
+      "groupID": 2,
+      "paidBy": 2,
+      "amount": 95,
+      "categoryID": 2,
+      "monthID": 202502,
+      "year": 2023,
+      "month": 5,
+      "description": "Expense for Transport",
+      "expenseDate": "2025-02-15",
+      "notes": ""
     },
     {
       "expenseID": 16,
-      "groupID": 2,
-      "paidBy": 1,
-      "amount": 42,
+      "groupID": 1,
+      "paidBy": 2,
+      "amount": 130,
       "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 6",
-      "expenseDate": "2024-11-16",
-      "notes": "Sample note"
+      "monthID": 202503,
+      "year": 2023,
+      "month": 6,
+      "description": "Expense for Food",
+      "expenseDate": "2025-03-15",
+      "notes": ""
     },
     {
       "expenseID": 17,
-      "groupID": 2,
-      "paidBy": 2,
-      "amount": 44,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 7",
-      "expenseDate": "2024-11-19",
-      "notes": "Sample note"
+      "groupID": 1,
+      "paidBy": 3,
+      "amount": 70,
+      "categoryID": 5,
+      "monthID": 202503,
+      "year": 2023,
+      "month": 6,
+      "description": "Expense for Misc",
+      "expenseDate": "2025-03-15",
+      "notes": ""
     },
     {
       "expenseID": 18,
       "groupID": 2,
-      "paidBy": 3,
-      "amount": 46,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 8",
-      "expenseDate": "2024-11-22",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 19,
-      "groupID": 2,
-      "paidBy": 4,
-      "amount": 48,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 9",
-      "expenseDate": "2024-11-25",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 20,
-      "groupID": 2,
-      "paidBy": 5,
-      "amount": 50,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for November 2024 - transaction 10",
-      "expenseDate": "2024-11-28",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 21,
-      "groupID": 1,
-      "paidBy": 1,
-      "amount": 52,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 1",
-      "expenseDate": "2024-12-01",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 22,
-      "groupID": 1,
       "paidBy": 2,
-      "amount": 54,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 2",
-      "expenseDate": "2024-12-04",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 23,
-      "groupID": 1,
-      "paidBy": 3,
-      "amount": 56,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 3",
-      "expenseDate": "2024-12-07",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 24,
-      "groupID": 1,
-      "paidBy": 4,
-      "amount": 58,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 4",
-      "expenseDate": "2024-12-10",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 25,
-      "groupID": 1,
-      "paidBy": 5,
-      "amount": 60,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 5",
-      "expenseDate": "2024-12-13",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 26,
-      "groupID": 2,
-      "paidBy": 1,
-      "amount": 62,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 6",
-      "expenseDate": "2024-12-16",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 27,
-      "groupID": 2,
-      "paidBy": 2,
-      "amount": 64,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 7",
-      "expenseDate": "2024-12-19",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 28,
-      "groupID": 2,
-      "paidBy": 3,
-      "amount": 66,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 8",
-      "expenseDate": "2024-12-22",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 29,
-      "groupID": 2,
-      "paidBy": 4,
-      "amount": 68,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 9",
-      "expenseDate": "2024-12-25",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 30,
-      "groupID": 2,
-      "paidBy": 5,
-      "amount": 70,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for December 2024 - transaction 10",
-      "expenseDate": "2024-12-28",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 31,
-      "groupID": 1,
-      "paidBy": 1,
-      "amount": 72,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 1",
-      "expenseDate": "2025-01-01",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 32,
-      "groupID": 1,
-      "paidBy": 2,
-      "amount": 74,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 2",
-      "expenseDate": "2025-01-04",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 33,
-      "groupID": 1,
-      "paidBy": 3,
-      "amount": 76,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 3",
-      "expenseDate": "2025-01-07",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 34,
-      "groupID": 1,
-      "paidBy": 4,
-      "amount": 78,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 4",
-      "expenseDate": "2025-01-10",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 35,
-      "groupID": 1,
-      "paidBy": 5,
-      "amount": 80,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 5",
-      "expenseDate": "2025-01-13",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 36,
-      "groupID": 2,
-      "paidBy": 1,
-      "amount": 82,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 6",
-      "expenseDate": "2025-01-16",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 37,
-      "groupID": 2,
-      "paidBy": 2,
-      "amount": 84,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 7",
-      "expenseDate": "2025-01-19",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 38,
-      "groupID": 2,
-      "paidBy": 3,
-      "amount": 86,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 8",
-      "expenseDate": "2025-01-22",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 39,
-      "groupID": 2,
-      "paidBy": 4,
-      "amount": 88,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 9",
-      "expenseDate": "2025-01-25",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 40,
-      "groupID": 2,
-      "paidBy": 5,
-      "amount": 90,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for January 2025 - transaction 10",
-      "expenseDate": "2025-01-28",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 41,
-      "groupID": 1,
-      "paidBy": 1,
-      "amount": 92,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 1",
-      "expenseDate": "2025-02-01",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 42,
-      "groupID": 1,
-      "paidBy": 2,
-      "amount": 94,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 2",
-      "expenseDate": "2025-02-04",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 43,
-      "groupID": 1,
-      "paidBy": 3,
-      "amount": 96,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 3",
-      "expenseDate": "2025-02-07",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 44,
-      "groupID": 1,
-      "paidBy": 4,
-      "amount": 98,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 4",
-      "expenseDate": "2025-02-10",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 45,
-      "groupID": 1,
-      "paidBy": 5,
-      "amount": 100,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 5",
-      "expenseDate": "2025-02-13",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 46,
-      "groupID": 2,
-      "paidBy": 1,
-      "amount": 102,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 6",
-      "expenseDate": "2025-02-16",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 47,
-      "groupID": 2,
-      "paidBy": 2,
-      "amount": 104,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 7",
-      "expenseDate": "2025-02-19",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 48,
-      "groupID": 2,
-      "paidBy": 3,
-      "amount": 106,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 8",
-      "expenseDate": "2025-02-22",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 49,
-      "groupID": 2,
-      "paidBy": 4,
-      "amount": 108,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 9",
-      "expenseDate": "2025-02-25",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 50,
-      "groupID": 2,
-      "paidBy": 5,
-      "amount": 110,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for February 2025 - transaction 10",
-      "expenseDate": "2025-02-28",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 51,
-      "groupID": 1,
-      "paidBy": 1,
-      "amount": 112,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 1",
-      "expenseDate": "2025-03-01",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 52,
-      "groupID": 1,
-      "paidBy": 2,
-      "amount": 114,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 2",
-      "expenseDate": "2025-03-04",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 53,
-      "groupID": 1,
-      "paidBy": 3,
-      "amount": 116,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 3",
-      "expenseDate": "2025-03-07",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 54,
-      "groupID": 1,
-      "paidBy": 4,
-      "amount": 118,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 4",
-      "expenseDate": "2025-03-10",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 55,
-      "groupID": 1,
-      "paidBy": 5,
-      "amount": 120,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 5",
-      "expenseDate": "2025-03-13",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 56,
-      "groupID": 2,
-      "paidBy": 1,
-      "amount": 122,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 6",
-      "expenseDate": "2025-03-16",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 57,
-      "groupID": 2,
-      "paidBy": 2,
-      "amount": 124,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 7",
-      "expenseDate": "2025-03-19",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 58,
-      "groupID": 2,
-      "paidBy": 3,
-      "amount": 126,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 8",
-      "expenseDate": "2025-03-22",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 59,
-      "groupID": 2,
-      "paidBy": 4,
-      "amount": 128,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 9",
-      "expenseDate": "2025-03-25",
-      "notes": "Sample note"
-    },
-    {
-      "expenseID": 60,
-      "groupID": 2,
-      "paidBy": 5,
-      "amount": 130,
-      "categoryID": 1,
-      "billID": null,
-      "description": "Test expense for March 2025 - transaction 10",
-      "expenseDate": "2025-03-28",
-      "notes": "Sample note"
+      "amount": 160,
+      "categoryID": 4,
+      "monthID": 202503,
+      "year": 2023,
+      "month": 6,
+      "description": "Expense for Utilities",
+      "expenseDate": "2025-03-15",
+      "notes": ""
     }
   ],
-  "expenseCategories": [
-    {
-      "categoryID": 1,
-      "categoryName": "General"
-    }
+  "ExpenseShares": [
+    { "expenseShareID": 1, "expenseID": 1, "userID": 1, "shareAmount": 40 },
+    { "expenseShareID": 2, "expenseID": 1, "userID": 2, "shareAmount": 40 },
+    { "expenseShareID": 3, "expenseID": 1, "userID": 3, "shareAmount": 40 },
+    
+    { "expenseShareID": 4, "expenseID": 2, "userID": 1, "shareAmount": 25 },
+    { "expenseShareID": 5, "expenseID": 2, "userID": 2, "shareAmount": 25 },
+    { "expenseShareID": 6, "expenseID": 2, "userID": 3, "shareAmount": 25 },
+    
+    { "expenseShareID": 7, "expenseID": 3, "userID": 1, "shareAmount": 45 },
+    { "expenseShareID": 8, "expenseID": 3, "userID": 2, "shareAmount": 45 },
+    
+    { "expenseShareID": 9, "expenseID": 4, "userID": 1, "shareAmount": 36.67 },
+    { "expenseShareID": 10, "expenseID": 4, "userID": 2, "shareAmount": 36.67 },
+    { "expenseShareID": 11, "expenseID": 4, "userID": 3, "shareAmount": 36.67 },
+    
+    { "expenseShareID": 12, "expenseID": 5, "userID": 1, "shareAmount": 20 },
+    { "expenseShareID": 13, "expenseID": 5, "userID": 2, "shareAmount": 20 },
+    { "expenseShareID": 14, "expenseID": 5, "userID": 3, "shareAmount": 20 },
+    
+    { "expenseShareID": 15, "expenseID": 6, "userID": 1, "shareAmount": 65 },
+    { "expenseShareID": 16, "expenseID": 6, "userID": 2, "shareAmount": 65 },
+    
+    { "expenseShareID": 17, "expenseID": 7, "userID": 1, "shareAmount": 31.67 },
+    { "expenseShareID": 18, "expenseID": 7, "userID": 2, "shareAmount": 31.67 },
+    { "expenseShareID": 19, "expenseID": 7, "userID": 3, "shareAmount": 31.67 },
+    
+    { "expenseShareID": 20, "expenseID": 8, "userID": 1, "shareAmount": 46.67 },
+    { "expenseShareID": 21, "expenseID": 8, "userID": 2, "shareAmount": 46.67 },
+    { "expenseShareID": 22, "expenseID": 8, "userID": 3, "shareAmount": 46.67 },
+    
+    { "expenseShareID": 23, "expenseID": 9, "userID": 1, "shareAmount": 42.5 },
+    { "expenseShareID": 24, "expenseID": 9, "userID": 2, "shareAmount": 42.5 },
+    
+    { "expenseShareID": 25, "expenseID": 10, "userID": 1, "shareAmount": 33.33 },
+    { "expenseShareID": 26, "expenseID": 10, "userID": 2, "shareAmount": 33.33 },
+    { "expenseShareID": 27, "expenseID": 10, "userID": 3, "shareAmount": 33.33 },
+    
+    { "expenseShareID": 28, "expenseID": 11, "userID": 1, "shareAmount": 50 },
+    { "expenseShareID": 29, "expenseID": 11, "userID": 2, "shareAmount": 50 },
+    { "expenseShareID": 30, "expenseID": 11, "userID": 3, "shareAmount": 50 },
+    
+    { "expenseShareID": 31, "expenseID": 12, "userID": 1, "shareAmount": 60 },
+    { "expenseShareID": 32, "expenseID": 12, "userID": 2, "shareAmount": 60 },
+    
+    { "expenseShareID": 33, "expenseID": 13, "userID": 1, "shareAmount": 26.67 },
+    { "expenseShareID": 34, "expenseID": 13, "userID": 2, "shareAmount": 26.67 },
+    { "expenseShareID": 35, "expenseID": 13, "userID": 3, "shareAmount": 26.67 },
+    
+    { "expenseShareID": 36, "expenseID": 14, "userID": 1, "shareAmount": 36.67 },
+    { "expenseShareID": 37, "expenseID": 14, "userID": 2, "shareAmount": 36.67 },
+    { "expenseShareID": 38, "expenseID": 14, "userID": 3, "shareAmount": 36.67 },
+    
+    { "expenseShareID": 39, "expenseID": 15, "userID": 1, "shareAmount": 47.5 },
+    { "expenseShareID": 40, "expenseID": 15, "userID": 2, "shareAmount": 47.5 },
+    
+    { "expenseShareID": 41, "expenseID": 16, "userID": 1, "shareAmount": 43.33 },
+    { "expenseShareID": 42, "expenseID": 16, "userID": 2, "shareAmount": 43.33 },
+    { "expenseShareID": 43, "expenseID": 16, "userID": 3, "shareAmount": 43.33 },
+    
+    { "expenseShareID": 44, "expenseID": 17, "userID": 1, "shareAmount": 23.33 },
+    { "expenseShareID": 45, "expenseID": 17, "userID": 2, "shareAmount": 23.33 },
+    { "expenseShareID": 46, "expenseID": 17, "userID": 3, "shareAmount": 23.33 },
+    
+    { "expenseShareID": 47, "expenseID": 18, "userID": 1, "shareAmount": 80 },
+    { "expenseShareID": 48, "expenseID": 18, "userID": 2, "shareAmount": 80 }
   ],
-  "expensesShares": [
-    { "expenseShareID": 1, "expenseID": 1, "userID": 1, "shareAmount": 2.4 },
-    { "expenseShareID": 2, "expenseID": 1, "userID": 2, "shareAmount": 2.4 },
-    { "expenseShareID": 3, "expenseID": 1, "userID": 3, "shareAmount": 2.4 },
-    { "expenseShareID": 4, "expenseID": 1, "userID": 4, "shareAmount": 2.4 },
-    { "expenseShareID": 5, "expenseID": 1, "userID": 5, "shareAmount": 2.4 },
-    
-    { "expenseShareID": 6, "expenseID": 2, "userID": 1, "shareAmount": 2.8 },
-    { "expenseShareID": 7, "expenseID": 2, "userID": 2, "shareAmount": 2.8 },
-    { "expenseShareID": 8, "expenseID": 2, "userID": 3, "shareAmount": 2.8 },
-    { "expenseShareID": 9, "expenseID": 2, "userID": 4, "shareAmount": 2.8 },
-    { "expenseShareID": 10, "expenseID": 2, "userID": 5, "shareAmount": 2.8 },
-    
-    { "expenseShareID": 11, "expenseID": 3, "userID": 1, "shareAmount": 3.2 },
-    { "expenseShareID": 12, "expenseID": 3, "userID": 2, "shareAmount": 3.2 },
-    { "expenseShareID": 13, "expenseID": 3, "userID": 3, "shareAmount": 3.2 },
-    { "expenseShareID": 14, "expenseID": 3, "userID": 4, "shareAmount": 3.2 },
-    { "expenseShareID": 15, "expenseID": 3, "userID": 5, "shareAmount": 3.2 },
-    
-    { "expenseShareID": 16, "expenseID": 4, "userID": 1, "shareAmount": 3.6 },
-    { "expenseShareID": 17, "expenseID": 4, "userID": 2, "shareAmount": 3.6 },
-    { "expenseShareID": 18, "expenseID": 4, "userID": 3, "shareAmount": 3.6 },
-    { "expenseShareID": 19, "expenseID": 4, "userID": 4, "shareAmount": 3.6 },
-    { "expenseShareID": 20, "expenseID": 4, "userID": 5, "shareAmount": 3.6 },
-    
-    { "expenseShareID": 21, "expenseID": 5, "userID": 1, "shareAmount": 4 },
-    { "expenseShareID": 22, "expenseID": 5, "userID": 2, "shareAmount": 4 },
-    { "expenseShareID": 23, "expenseID": 5, "userID": 3, "shareAmount": 4 },
-    { "expenseShareID": 24, "expenseID": 5, "userID": 4, "shareAmount": 4 },
-    { "expenseShareID": 25, "expenseID": 5, "userID": 5, "shareAmount": 4 },
-    
-    { "expenseShareID": 26, "expenseID": 6, "userID": 1, "shareAmount": 4.4 },
-    { "expenseShareID": 27, "expenseID": 6, "userID": 2, "shareAmount": 4.4 },
-    { "expenseShareID": 28, "expenseID": 6, "userID": 3, "shareAmount": 4.4 },
-    { "expenseShareID": 29, "expenseID": 6, "userID": 4, "shareAmount": 4.4 },
-    { "expenseShareID": 30, "expenseID": 6, "userID": 5, "shareAmount": 4.4 },
-    
-    { "expenseShareID": 31, "expenseID": 7, "userID": 1, "shareAmount": 4.8 },
-    { "expenseShareID": 32, "expenseID": 7, "userID": 2, "shareAmount": 4.8 },
-    { "expenseShareID": 33, "expenseID": 7, "userID": 3, "shareAmount": 4.8 },
-    { "expenseShareID": 34, "expenseID": 7, "userID": 4, "shareAmount": 4.8 },
-    { "expenseShareID": 35, "expenseID": 7, "userID": 5, "shareAmount": 4.8 },
-    
-    { "expenseShareID": 36, "expenseID": 8, "userID": 1, "shareAmount": 5.2 },
-    { "expenseShareID": 37, "expenseID": 8, "userID": 2, "shareAmount": 5.2 },
-    { "expenseShareID": 38, "expenseID": 8, "userID": 3, "shareAmount": 5.2 },
-    { "expenseShareID": 39, "expenseID": 8, "userID": 4, "shareAmount": 5.2 },
-    { "expenseShareID": 40, "expenseID": 8, "userID": 5, "shareAmount": 5.2 },
-    
-    { "expenseShareID": 41, "expenseID": 9, "userID": 1, "shareAmount": 5.6 },
-    { "expenseShareID": 42, "expenseID": 9, "userID": 2, "shareAmount": 5.6 },
-    { "expenseShareID": 43, "expenseID": 9, "userID": 3, "shareAmount": 5.6 },
-    { "expenseShareID": 44, "expenseID": 9, "userID": 4, "shareAmount": 5.6 },
-    { "expenseShareID": 45, "expenseID": 9, "userID": 5, "shareAmount": 5.6 },
-    
-    { "expenseShareID": 46, "expenseID": 10, "userID": 1, "shareAmount": 6 },
-    { "expenseShareID": 47, "expenseID": 10, "userID": 2, "shareAmount": 6 },
-    { "expenseShareID": 48, "expenseID": 10, "userID": 3, "shareAmount": 6 },
-    { "expenseShareID": 49, "expenseID": 10, "userID": 4, "shareAmount": 6 },
-    { "expenseShareID": 50, "expenseID": 10, "userID": 5, "shareAmount": 6 },
-    
-      { "expenseShareID": 51, "expenseID": 11, "userID": 1, "shareAmount": 6.4 },
-      { "expenseShareID": 52, "expenseID": 11, "userID": 2, "shareAmount": 6.4 },
-      { "expenseShareID": 53, "expenseID": 11, "userID": 3, "shareAmount": 6.4 },
-      { "expenseShareID": 54, "expenseID": 11, "userID": 4, "shareAmount": 6.4 },
-      { "expenseShareID": 55, "expenseID": 11, "userID": 5, "shareAmount": 6.4 },
-    
-      { "expenseShareID": 56, "expenseID": 12, "userID": 1, "shareAmount": 6.8 },
-      { "expenseShareID": 57, "expenseID": 12, "userID": 2, "shareAmount": 6.8 },
-      { "expenseShareID": 58, "expenseID": 12, "userID": 3, "shareAmount": 6.8 },
-      { "expenseShareID": 59, "expenseID": 12, "userID": 4, "shareAmount": 6.8 },
-      { "expenseShareID": 60, "expenseID": 12, "userID": 5, "shareAmount": 6.8 },
-    
-      { "expenseShareID": 61, "expenseID": 13, "userID": 1, "shareAmount": 7.2 },
-      { "expenseShareID": 62, "expenseID": 13, "userID": 2, "shareAmount": 7.2 },
-      { "expenseShareID": 63, "expenseID": 13, "userID": 3, "shareAmount": 7.2 },
-      { "expenseShareID": 64, "expenseID": 13, "userID": 4, "shareAmount": 7.2 },
-      { "expenseShareID": 65, "expenseID": 13, "userID": 5, "shareAmount": 7.2 },
-    
-      { "expenseShareID": 66, "expenseID": 14, "userID": 1, "shareAmount": 7.6 },
-      { "expenseShareID": 67, "expenseID": 14, "userID": 2, "shareAmount": 7.6 },
-      { "expenseShareID": 68, "expenseID": 14, "userID": 3, "shareAmount": 7.6 },
-      { "expenseShareID": 69, "expenseID": 14, "userID": 4, "shareAmount": 7.6 },
-      { "expenseShareID": 70, "expenseID": 14, "userID": 5, "shareAmount": 7.6 },
-    
-      { "expenseShareID": 71, "expenseID": 15, "userID": 1, "shareAmount": 8.0 },
-      { "expenseShareID": 72, "expenseID": 15, "userID": 2, "shareAmount": 8.0 },
-      { "expenseShareID": 73, "expenseID": 15, "userID": 3, "shareAmount": 8.0 },
-      { "expenseShareID": 74, "expenseID": 15, "userID": 4, "shareAmount": 8.0 },
-      { "expenseShareID": 75, "expenseID": 15, "userID": 5, "shareAmount": 8.0 },
-    
-      { "expenseShareID": 76, "expenseID": 16, "userID": 1, "shareAmount": 8.4 },
-      { "expenseShareID": 77, "expenseID": 16, "userID": 2, "shareAmount": 8.4 },
-      { "expenseShareID": 78, "expenseID": 16, "userID": 3, "shareAmount": 8.4 },
-      { "expenseShareID": 79, "expenseID": 16, "userID": 4, "shareAmount": 8.4 },
-      { "expenseShareID": 80, "expenseID": 16, "userID": 5, "shareAmount": 8.4 },
-    
-      { "expenseShareID": 81, "expenseID": 17, "userID": 1, "shareAmount": 8.8 },
-      { "expenseShareID": 82, "expenseID": 17, "userID": 2, "shareAmount": 8.8 },
-      { "expenseShareID": 83, "expenseID": 17, "userID": 3, "shareAmount": 8.8 },
-      { "expenseShareID": 84, "expenseID": 17, "userID": 4, "shareAmount": 8.8 },
-      { "expenseShareID": 85, "expenseID": 17, "userID": 5, "shareAmount": 8.8 },
-    
-      { "expenseShareID": 86, "expenseID": 18, "userID": 1, "shareAmount": 9.2 },
-      { "expenseShareID": 87, "expenseID": 18, "userID": 2, "shareAmount": 9.2 },
-      { "expenseShareID": 88, "expenseID": 18, "userID": 3, "shareAmount": 9.2 },
-      { "expenseShareID": 89, "expenseID": 18, "userID": 4, "shareAmount": 9.2 },
-      { "expenseShareID": 90, "expenseID": 18, "userID": 5, "shareAmount": 9.2 },
-    
-      { "expenseShareID": 91, "expenseID": 19, "userID": 1, "shareAmount": 9.6 },
-      { "expenseShareID": 92, "expenseID": 19, "userID": 2, "shareAmount": 9.6 },
-      { "expenseShareID": 93, "expenseID": 19, "userID": 3, "shareAmount": 9.6 },
-      { "expenseShareID": 94, "expenseID": 19, "userID": 4, "shareAmount": 9.6 },
-      { "expenseShareID": 95, "expenseID": 19, "userID": 5, "shareAmount": 9.6 },
-    
-      { "expenseShareID": 96, "expenseID": 20, "userID": 1, "shareAmount": 10.0 },
-      { "expenseShareID": 97, "expenseID": 20, "userID": 2, "shareAmount": 10.0 },
-      { "expenseShareID": 98, "expenseID": 20, "userID": 3, "shareAmount": 10.0 },
-      { "expenseShareID": 99, "expenseID": 20, "userID": 4, "shareAmount": 10.0 },
-      { "expenseShareID": 100, "expenseID": 20, "userID": 5, "shareAmount": 10.0 },
-    
-      { "expenseShareID": 101, "expenseID": 21, "userID": 1, "shareAmount": 10.4 },
-      { "expenseShareID": 102, "expenseID": 21, "userID": 2, "shareAmount": 10.4 },
-      { "expenseShareID": 103, "expenseID": 21, "userID": 3, "shareAmount": 10.4 },
-      { "expenseShareID": 104, "expenseID": 21, "userID": 4, "shareAmount": 10.4 },
-      { "expenseShareID": 105, "expenseID": 21, "userID": 5, "shareAmount": 10.4 },
-    
-      { "expenseShareID": 106, "expenseID": 22, "userID": 1, "shareAmount": 10.8 },
-      { "expenseShareID": 107, "expenseID": 22, "userID": 2, "shareAmount": 10.8 },
-      { "expenseShareID": 108, "expenseID": 22, "userID": 3, "shareAmount": 10.8 },
-      { "expenseShareID": 109, "expenseID": 22, "userID": 4, "shareAmount": 10.8 },
-      { "expenseShareID": 110, "expenseID": 22, "userID": 5, "shareAmount": 10.8 },
-    
-      { "expenseShareID": 111, "expenseID": 23, "userID": 1, "shareAmount": 11.2 },
-      { "expenseShareID": 112, "expenseID": 23, "userID": 2, "shareAmount": 11.2 },
-      { "expenseShareID": 113, "expenseID": 23, "userID": 3, "shareAmount": 11.2 },
-      { "expenseShareID": 114, "expenseID": 23, "userID": 4, "shareAmount": 11.2 },
-      { "expenseShareID": 115, "expenseID": 23, "userID": 5, "shareAmount": 11.2 },
-    
-      { "expenseShareID": 116, "expenseID": 24, "userID": 1, "shareAmount": 11.6 },
-      { "expenseShareID": 117, "expenseID": 24, "userID": 2, "shareAmount": 11.6 },
-      { "expenseShareID": 118, "expenseID": 24, "userID": 3, "shareAmount": 11.6 },
-      { "expenseShareID": 119, "expenseID": 24, "userID": 4, "shareAmount": 11.6 },
-      { "expenseShareID": 120, "expenseID": 24, "userID": 5, "shareAmount": 11.6 },
-    
-      { "expenseShareID": 121, "expenseID": 25, "userID": 1, "shareAmount": 12.0 },
-      { "expenseShareID": 122, "expenseID": 25, "userID": 2, "shareAmount": 12.0 },
-      { "expenseShareID": 123, "expenseID": 25, "userID": 3, "shareAmount": 12.0 },
-      { "expenseShareID": 124, "expenseID": 25, "userID": 4, "shareAmount": 12.0 },
-      { "expenseShareID": 125, "expenseID": 25, "userID": 5, "shareAmount": 12.0 },
-    
-      { "expenseShareID": 126, "expenseID": 26, "userID": 1, "shareAmount": 12.4 },
-      { "expenseShareID": 127, "expenseID": 26, "userID": 2, "shareAmount": 12.4 },
-      { "expenseShareID": 128, "expenseID": 26, "userID": 3, "shareAmount": 12.4 },
-      { "expenseShareID": 129, "expenseID": 26, "userID": 4, "shareAmount": 12.4 },
-      { "expenseShareID": 130, "expenseID": 26, "userID": 5, "shareAmount": 12.4 },
-    
-      { "expenseShareID": 131, "expenseID": 27, "userID": 1, "shareAmount": 12.8 },
-      { "expenseShareID": 132, "expenseID": 27, "userID": 2, "shareAmount": 12.8 },
-      { "expenseShareID": 133, "expenseID": 27, "userID": 3, "shareAmount": 12.8 },
-      { "expenseShareID": 134, "expenseID": 27, "userID": 4, "shareAmount": 12.8 },
-      { "expenseShareID": 135, "expenseID": 27, "userID": 5, "shareAmount": 12.8 },
-    
-      { "expenseShareID": 136, "expenseID": 28, "userID": 1, "shareAmount": 13.2 },
-      { "expenseShareID": 137, "expenseID": 28, "userID": 2, "shareAmount": 13.2 },
-      { "expenseShareID": 138, "expenseID": 28, "userID": 3, "shareAmount": 13.2 },
-      { "expenseShareID": 139, "expenseID": 28, "userID": 4, "shareAmount": 13.2 },
-      { "expenseShareID": 140, "expenseID": 28, "userID": 5, "shareAmount": 13.2 },
-    
-      { "expenseShareID": 141, "expenseID": 29, "userID": 1, "shareAmount": 13.6 },
-      { "expenseShareID": 142, "expenseID": 29, "userID": 2, "shareAmount": 13.6 },
-      { "expenseShareID": 143, "expenseID": 29, "userID": 3, "shareAmount": 13.6 },
-      { "expenseShareID": 144, "expenseID": 29, "userID": 4, "shareAmount": 13.6 },
-      { "expenseShareID": 145, "expenseID": 29, "userID": 5, "shareAmount": 13.6 },
-    
-      { "expenseShareID": 146, "expenseID": 30, "userID": 1, "shareAmount": 14.0 },
-      { "expenseShareID": 147, "expenseID": 30, "userID": 2, "shareAmount": 14.0 },
-      { "expenseShareID": 148, "expenseID": 30, "userID": 3, "shareAmount": 14.0 },
-      { "expenseShareID": 149, "expenseID": 30, "userID": 4, "shareAmount": 14.0 },
-      { "expenseShareID": 150, "expenseID": 30, "userID": 5, "shareAmount": 14.0 },
-    
-      { "expenseShareID": 151, "expenseID": 31, "userID": 1, "shareAmount": 14.4 },
-      { "expenseShareID": 152, "expenseID": 31, "userID": 2, "shareAmount": 14.4 },
-      { "expenseShareID": 153, "expenseID": 31, "userID": 3, "shareAmount": 14.4 },
-      { "expenseShareID": 154, "expenseID": 31, "userID": 4, "shareAmount": 14.4 },
-      { "expenseShareID": 155, "expenseID": 31, "userID": 5, "shareAmount": 14.4 },
-    
-      { "expenseShareID": 156, "expenseID": 32, "userID": 1, "shareAmount": 14.8 },
-      { "expenseShareID": 157, "expenseID": 32, "userID": 2, "shareAmount": 14.8 },
-      { "expenseShareID": 158, "expenseID": 32, "userID": 3, "shareAmount": 14.8 },
-      { "expenseShareID": 159, "expenseID": 32, "userID": 4, "shareAmount": 14.8 },
-      { "expenseShareID": 160, "expenseID": 32, "userID": 5, "shareAmount": 14.8 },
-    
-      { "expenseShareID": 161, "expenseID": 33, "userID": 1, "shareAmount": 15.2 },
-      { "expenseShareID": 162, "expenseID": 33, "userID": 2, "shareAmount": 15.2 },
-      { "expenseShareID": 163, "expenseID": 33, "userID": 3, "shareAmount": 15.2 },
-      { "expenseShareID": 164, "expenseID": 33, "userID": 4, "shareAmount": 15.2 },
-      { "expenseShareID": 165, "expenseID": 33, "userID": 5, "shareAmount": 15.2 },
-    
-      { "expenseShareID": 166, "expenseID": 34, "userID": 1, "shareAmount": 15.6 },
-      { "expenseShareID": 167, "expenseID": 34, "userID": 2, "shareAmount": 15.6 },
-      { "expenseShareID": 168, "expenseID": 34, "userID": 3, "shareAmount": 15.6 },
-      { "expenseShareID": 169, "expenseID": 34, "userID": 4, "shareAmount": 15.6 },
-      { "expenseShareID": 170, "expenseID": 34, "userID": 5, "shareAmount": 15.6 },
-    
-      { "expenseShareID": 171, "expenseID": 35, "userID": 1, "shareAmount": 16.0 },
-      { "expenseShareID": 172, "expenseID": 35, "userID": 2, "shareAmount": 16.0 },
-      { "expenseShareID": 173, "expenseID": 35, "userID": 3, "shareAmount": 16.0 },
-      { "expenseShareID": 174, "expenseID": 35, "userID": 4, "shareAmount": 16.0 },
-      { "expenseShareID": 175, "expenseID": 35, "userID": 5, "shareAmount": 16.0 },
-    
-      [
-        { "expenseShareID": 176, "expenseID": 36, "userID": 1, "shareAmount": 16.4 },
-        { "expenseShareID": 177, "expenseID": 36, "userID": 2, "shareAmount": 16.4 },
-        { "expenseShareID": 178, "expenseID": 36, "userID": 3, "shareAmount": 16.4 },
-        { "expenseShareID": 179, "expenseID": 36, "userID": 4, "shareAmount": 16.4 },
-        { "expenseShareID": 180, "expenseID": 36, "userID": 5, "shareAmount": 16.4 },
-      
-        { "expenseShareID": 181, "expenseID": 37, "userID": 1, "shareAmount": 16.8 },
-        { "expenseShareID": 182, "expenseID": 37, "userID": 2, "shareAmount": 16.8 },
-        { "expenseShareID": 183, "expenseID": 37, "userID": 3, "shareAmount": 16.8 },
-        { "expenseShareID": 184, "expenseID": 37, "userID": 4, "shareAmount": 16.8 },
-        { "expenseShareID": 185, "expenseID": 37, "userID": 5, "shareAmount": 16.8 },
-      
-        { "expenseShareID": 186, "expenseID": 38, "userID": 1, "shareAmount": 17.2 },
-        { "expenseShareID": 187, "expenseID": 38, "userID": 2, "shareAmount": 17.2 },
-        { "expenseShareID": 188, "expenseID": 38, "userID": 3, "shareAmount": 17.2 },
-        { "expenseShareID": 189, "expenseID": 38, "userID": 4, "shareAmount": 17.2 },
-        { "expenseShareID": 190, "expenseID": 38, "userID": 5, "shareAmount": 17.2 },
-      
-        { "expenseShareID": 191, "expenseID": 39, "userID": 1, "shareAmount": 17.6 },
-        { "expenseShareID": 192, "expenseID": 39, "userID": 2, "shareAmount": 17.6 },
-        { "expenseShareID": 193, "expenseID": 39, "userID": 3, "shareAmount": 17.6 },
-        { "expenseShareID": 194, "expenseID": 39, "userID": 4, "shareAmount": 17.6 },
-        { "expenseShareID": 195, "expenseID": 39, "userID": 5, "shareAmount": 17.6 },
-      
-        { "expenseShareID": 196, "expenseID": 40, "userID": 1, "shareAmount": 18.0 },
-        { "expenseShareID": 197, "expenseID": 40, "userID": 2, "shareAmount": 18.0 },
-        { "expenseShareID": 198, "expenseID": 40, "userID": 3, "shareAmount": 18.0 },
-        { "expenseShareID": 199, "expenseID": 40, "userID": 4, "shareAmount": 18.0 },
-        { "expenseShareID": 200, "expenseID": 40, "userID": 5, "shareAmount": 18.0 },
-      
-        { "expenseShareID": 201, "expenseID": 41, "userID": 1, "shareAmount": 18.4 },
-        { "expenseShareID": 202, "expenseID": 41, "userID": 2, "shareAmount": 18.4 },
-        { "expenseShareID": 203, "expenseID": 41, "userID": 3, "shareAmount": 18.4 },
-        { "expenseShareID": 204, "expenseID": 41, "userID": 4, "shareAmount": 18.4 },
-        { "expenseShareID": 205, "expenseID": 41, "userID": 5, "shareAmount": 18.4 },
-      
-        { "expenseShareID": 206, "expenseID": 42, "userID": 1, "shareAmount": 18.8 },
-        { "expenseShareID": 207, "expenseID": 42, "userID": 2, "shareAmount": 18.8 },
-        { "expenseShareID": 208, "expenseID": 42, "userID": 3, "shareAmount": 18.8 },
-        { "expenseShareID": 209, "expenseID": 42, "userID": 4, "shareAmount": 18.8 },
-        { "expenseShareID": 210, "expenseID": 42, "userID": 5, "shareAmount": 18.8 },
-      
-        { "expenseShareID": 211, "expenseID": 43, "userID": 1, "shareAmount": 19.2 },
-        { "expenseShareID": 212, "expenseID": 43, "userID": 2, "shareAmount": 19.2 },
-        { "expenseShareID": 213, "expenseID": 43, "userID": 3, "shareAmount": 19.2 },
-        { "expenseShareID": 214, "expenseID": 43, "userID": 4, "shareAmount": 19.2 },
-        { "expenseShareID": 215, "expenseID": 43, "userID": 5, "shareAmount": 19.2 },
-      
-        { "expenseShareID": 216, "expenseID": 44, "userID": 1, "shareAmount": 19.6 },
-        { "expenseShareID": 217, "expenseID": 44, "userID": 2, "shareAmount": 19.6 },
-        { "expenseShareID": 218, "expenseID": 44, "userID": 3, "shareAmount": 19.6 },
-        { "expenseShareID": 219, "expenseID": 44, "userID": 4, "shareAmount": 19.6 },
-        { "expenseShareID": 220, "expenseID": 44, "userID": 5, "shareAmount": 19.6 },
-      
-        { "expenseShareID": 221, "expenseID": 45, "userID": 1, "shareAmount": 20.0 },
-        { "expenseShareID": 222, "expenseID": 45, "userID": 2, "shareAmount": 20.0 },
-        { "expenseShareID": 223, "expenseID": 45, "userID": 3, "shareAmount": 20.0 },
-        { "expenseShareID": 224, "expenseID": 45, "userID": 4, "shareAmount": 20.0 },
-        { "expenseShareID": 225, "expenseID": 45, "userID": 5, "shareAmount": 20.0 },
-      
-        { "expenseShareID": 226, "expenseID": 46, "userID": 1, "shareAmount": 20.4 },
-        { "expenseShareID": 227, "expenseID": 46, "userID": 2, "shareAmount": 20.4 },
-        { "expenseShareID": 228, "expenseID": 46, "userID": 3, "shareAmount": 20.4 },
-        { "expenseShareID": 229, "expenseID": 46, "userID": 4, "shareAmount": 20.4 },
-        { "expenseShareID": 230, "expenseID": 46, "userID": 5, "shareAmount": 20.4 },
-      
-        { "expenseShareID": 231, "expenseID": 47, "userID": 1, "shareAmount": 20.8 },
-        { "expenseShareID": 232, "expenseID": 47, "userID": 2, "shareAmount": 20.8 },
-        { "expenseShareID": 233, "expenseID": 47, "userID": 3, "shareAmount": 20.8 },
-        { "expenseShareID": 234, "expenseID": 47, "userID": 4, "shareAmount": 20.8 },
-        { "expenseShareID": 235, "expenseID": 47, "userID": 5, "shareAmount": 20.8 },
-      
-        { "expenseShareID": 236, "expenseID": 48, "userID": 1, "shareAmount": 21.2 },
-        { "expenseShareID": 237, "expenseID": 48, "userID": 2, "shareAmount": 21.2 },
-        { "expenseShareID": 238, "expenseID": 48, "userID": 3, "shareAmount": 21.2 },
-        { "expenseShareID": 239, "expenseID": 48, "userID": 4, "shareAmount": 21.2 },
-        { "expenseShareID": 240, "expenseID": 48, "userID": 5, "shareAmount": 21.2 },
-      
-        { "expenseShareID": 241, "expenseID": 49, "userID": 1, "shareAmount": 21.6 },
-        { "expenseShareID": 242, "expenseID": 49, "userID": 2, "shareAmount": 21.6 },
-        { "expenseShareID": 243, "expenseID": 49, "userID": 3, "shareAmount": 21.6 },
-        { "expenseShareID": 244, "expenseID": 49, "userID": 4, "shareAmount": 21.6 },
-        { "expenseShareID": 245, "expenseID": 49, "userID": 5, "shareAmount": 21.6 },
-      
-        { "expenseShareID": 246, "expenseID": 50, "userID": 1, "shareAmount": 22.0 },
-        { "expenseShareID": 247, "expenseID": 50, "userID": 2, "shareAmount": 22.0 },
-        { "expenseShareID": 248, "expenseID": 50, "userID": 3, "shareAmount": 22.0 },
-        { "expenseShareID": 249, "expenseID": 50, "userID": 4, "shareAmount": 22.0 },
-        { "expenseShareID": 250, "expenseID": 50, "userID": 5, "shareAmount": 22.0 },
-      
-        { "expenseShareID": 251, "expenseID": 51, "userID": 1, "shareAmount": 22.4 },
-        { "expenseShareID": 252, "expenseID": 51, "userID": 2, "shareAmount": 22.4 },
-        { "expenseShareID": 253, "expenseID": 51, "userID": 3, "shareAmount": 22.4 },
-        { "expenseShareID": 254, "expenseID": 51, "userID": 4, "shareAmount": 22.4 },
-        { "expenseShareID": 255, "expenseID": 51, "userID": 5, "shareAmount": 22.4 },
-      
-        { "expenseShareID": 256, "expenseID": 52, "userID": 1, "shareAmount": 22.8 },
-        { "expenseShareID": 257, "expenseID": 52, "userID": 2, "shareAmount": 22.8 },
-        { "expenseShareID": 258, "expenseID": 52, "userID": 3, "shareAmount": 22.8 },
-        { "expenseShareID": 259, "expenseID": 52, "userID": 4, "shareAmount": 22.8 },
-        { "expenseShareID": 260, "expenseID": 52, "userID": 5, "shareAmount": 22.8 },
-      
-        { "expenseShareID": 261, "expenseID": 53, "userID": 1, "shareAmount": 23.2 },
-        { "expenseShareID": 262, "expenseID": 53, "userID": 2, "shareAmount": 23.2 },
-        { "expenseShareID": 263, "expenseID": 53, "userID": 3, "shareAmount": 23.2 },
-        { "expenseShareID": 264, "expenseID": 53, "userID": 4, "shareAmount": 23.2 },
-        { "expenseShareID": 265, "expenseID": 53, "userID": 5, "shareAmount": 23.2 },
-      
-        { "expenseShareID": 266, "expenseID": 54, "userID": 1, "shareAmount": 23.6 },
-        { "expenseShareID": 267, "expenseID": 54, "userID": 2, "shareAmount": 23.6 },
-        { "expenseShareID": 268, "expenseID": 54, "userID": 3, "shareAmount": 23.6 },
-        { "expenseShareID": 269, "expenseID": 54, "userID": 4, "shareAmount": 23.6 },
-        { "expenseShareID": 270, "expenseID": 54, "userID": 5, "shareAmount": 23.6 },
-      
-        { "expenseShareID": 271, "expenseID": 55, "userID": 1, "shareAmount": 24.0 },
-        { "expenseShareID": 272, "expenseID": 55, "userID": 2, "shareAmount": 24.0 },
-        { "expenseShareID": 273, "expenseID": 55, "userID": 3, "shareAmount": 24.0 },
-        { "expenseShareID": 274, "expenseID": 55, "userID": 4, "shareAmount": 24.0 },
-        { "expenseShareID": 275, "expenseID": 55, "userID": 5, "shareAmount": 24.0 },
-      
-        { "expenseShareID": 276, "expenseID": 56, "userID": 1, "shareAmount": 24.4 },
-        { "expenseShareID": 277, "expenseID": 56, "userID": 2, "shareAmount": 24.4 },
-        { "expenseShareID": 278, "expenseID": 56, "userID": 3, "shareAmount": 24.4 },
-        { "expenseShareID": 279, "expenseID": 56, "userID": 4, "shareAmount": 24.4 },
-        { "expenseShareID": 280, "expenseID": 56, "userID": 5, "shareAmount": 24.4 },
-      
-        { "expenseShareID": 281, "expenseID": 57, "userID": 1, "shareAmount": 24.8 },
-        { "expenseShareID": 282, "expenseID": 57, "userID": 2, "shareAmount": 24.8 },
-        { "expenseShareID": 283, "expenseID": 57, "userID": 3, "shareAmount": 24.8 },
-        { "expenseShareID": 284, "expenseID": 57, "userID": 4, "shareAmount": 24.8 },
-        { "expenseShareID": 285, "expenseID": 57, "userID": 5, "shareAmount": 24.8 },
-      
-        { "expenseShareID": 286, "expenseID": 58, "userID": 1, "shareAmount": 25.2 },
-        { "expenseShareID": 287, "expenseID": 58, "userID": 2, "shareAmount": 25.2 },
-        { "expenseShareID": 288, "expenseID": 58, "userID": 3, "shareAmount": 25.2 },
-        { "expenseShareID": 289, "expenseID": 58, "userID": 4, "shareAmount": 25.2 },
-        { "expenseShareID": 290, "expenseID": 58, "userID": 5, "shareAmount": 25.2 },
-      
-        { "expenseShareID": 291, "expenseID": 59, "userID": 1, "shareAmount": 25.6 },
-        { "expenseShareID": 292, "expenseID": 59, "userID": 2, "shareAmount": 25.6 },
-        { "expenseShareID": 293, "expenseID": 59, "userID": 3, "shareAmount": 25.6 },
-        { "expenseShareID": 294, "expenseID": 59, "userID": 4, "shareAmount": 25.6 },
-        { "expenseShareID": 295, "expenseID": 59, "userID": 5, "shareAmount": 25.6 },
-      
-        { "expenseShareID": 296, "expenseID": 60, "userID": 1, "shareAmount": 26 },
-        { "expenseShareID": 297, "expenseID": 60, "userID": 2, "shareAmount": 26 },
-        { "expenseShareID": 298, "expenseID": 60, "userID": 3, "shareAmount": 26 },
-        { "expenseShareID": 299, "expenseID": 60, "userID": 4, "shareAmount": 26 },
-        { "expenseShareID": 300, "expenseID": 60, "userID": 5, "shareAmount": 26 }
-      
-      ]
-  ],
-  "payments": [
+  "Payments": [
     {
       "paymentID": 1,
       "groupID": 1,
-      "paidBy": 1,
-      "paidTo": 2,
+      "paidBy": 2,
+      "paidTo": 1,
       "amount": 15,
-      "paymentDate": "2024-10-15"
-    },
-    {
-      "paymentID": 2,
-      "groupID": 2,
-      "paidBy": 3,
-      "paidTo": 4,
-      "amount": 20,
-      "paymentDate": "2024-10-20"
-    },
-    {
-      "paymentID": 3,
-      "groupID": 1,
-      "paidBy": 2,
-      "paidTo": 3,
-      "amount": 25,
-      "paymentDate": "2024-11-15"
-    },
-    {
-      "paymentID": 4,
-      "groupID": 2,
-      "paidBy": 4,
-      "paidTo": 5,
-      "amount": 30,
-      "paymentDate": "2024-11-20"
-    },
-    {
-      "paymentID": 5,
-      "groupID": 1,
-      "paidBy": 3,
-      "paidTo": 1,
-      "amount": 35,
-      "paymentDate": "2024-12-15"
-    },
-    {
-      "paymentID": 6,
-      "groupID": 2,
-      "paidBy": 5,
-      "paidTo": 2,
-      "amount": 40,
-      "paymentDate": "2024-12-20"
-    },
-    {
-      "paymentID": 7,
-      "groupID": 1,
-      "paidBy": 4,
-      "paidTo": 3,
-      "amount": 45,
-      "paymentDate": "2025-01-15"
-    },
-    {
-      "paymentID": 8,
-      "groupID": 2,
-      "paidBy": 1,
-      "paidTo": 5,
-      "amount": 50,
-      "paymentDate": "2025-01-20"
-    },
-    {
-      "paymentID": 9,
-      "groupID": 1,
-      "paidBy": 5,
-      "paidTo": 4,
-      "amount": 55,
-      "paymentDate": "2025-02-15"
-    },
-    {
-      "paymentID": 10,
-      "groupID": 2,
-      "paidBy": 2,
-      "paidTo": 1,
-      "amount": 60,
-      "paymentDate": "2025-02-20"
-    },
-    {
-      "paymentID": 11,
-      "groupID": 1,
-      "paidBy": 3,
-      "paidTo": 2,
-      "amount": 65,
-      "paymentDate": "2025-03-15"
-    },
-    {
-      "paymentID": 12,
-      "groupID": 2,
-      "paidBy": 4,
-      "paidTo": 5,
-      "amount": 70,
+      "monthID": 202503,
+      "year": 2023,
+      "month": 6,
       "paymentDate": "2025-03-20"
     }
   ],
-  "electricBills": [
+  "ElectricBills": [
     {
-      "billID": 1,
+      "monthID": 202410,
       "groupID": 1,
-      "totalCost": 150,
-      "totalConsumption": 1000,
-      "billingDate": "2024-12-15",
-      "notes": "December electric bill for Group 1"
+      "totalConsumption": 150,
+      "totalCost": 1500,
+      "billingDate": "2024-10-28",
+      "notes": ""
     },
     {
-      "billID": 2,
-      "groupID": 2,
-      "totalCost": 200,
-      "totalConsumption": 1200,
-      "billingDate": "2025-01-15",
-      "notes": "January electric bill for Group 2"
+      "monthID": 202411,
+      "groupID": 1,
+      "totalConsumption": 120,
+      "totalCost": 1200,
+      "billingDate": "2024-11-28",
+      "notes": ""
+    },
+    {
+      "monthID": 202412,
+      "groupID": 1,
+      "totalConsumption": 180,
+      "totalCost": 1800,
+      "billingDate": "2024-12-28",
+      "notes": ""
+    },
+    {
+      "monthID": 202501,
+      "groupID": 1,
+      "totalConsumption": 110,
+      "totalCost": 1100,
+      "billingDate": "2025-01-28",
+      "notes": ""
+    },
+    {
+      "monthID": 202502,
+      "groupID": 1,
+      "totalConsumption": 170,
+      "totalCost": 1700,
+      "billingDate": "2025-02-28",
+      "notes": ""
+    },
+    {
+      "monthID": 202503,
+      "groupID": 1,
+      "totalConsumption": 130,
+      "totalCost": 1300,
+      "billingDate": "2025-03-28",
+      "notes": ""
     }
   ],
-  "electricBillRatios": [
-    { "ratioID": 1, "billID": 1, "userID": 1, "userRatio": 1 },
-    { "ratioID": 2, "billID": 1, "userID": 2, "userRatio": 1 },
-    { "ratioID": 3, "billID": 1, "userID": 3, "userRatio": 1 },
-    { "ratioID": 4, "billID": 1, "userID": 4, "userRatio": 1 },
-    { "ratioID": 5, "billID": 1, "userID": 5, "userRatio": 1 },
-    { "ratioID": 6, "billID": 2, "userID": 1, "userRatio": 1 },
-    { "ratioID": 7, "billID": 2, "userID": 2, "userRatio": 1 },
-    { "ratioID": 8, "billID": 2, "userID": 3, "userRatio": 1 },
-    { "ratioID": 9, "billID": 2, "userID": 4, "userRatio": 1 },
-    { "ratioID": 10, "billID": 2, "userID": 5, "userRatio": 1 }
+  "ElectricBillRatios": [
+    { "monthID": 202410, "groupID": 1, "userID": 1, "userRatio": 1 },
+    { "monthID": 202410, "groupID": 1, "userID": 2, "userRatio": 1 },
+    { "monthID": 202410, "groupID": 1, "userID": 3, "userRatio": 1.5 },
+    
+    { "monthID": 202411, "groupID": 1, "userID": 1, "userRatio": 1 },
+    { "monthID": 202411, "groupID": 1, "userID": 2, "userRatio": 1 },
+    { "monthID": 202411, "groupID": 1, "userID": 3, "userRatio": 1.5 },
+    
+    { "monthID": 202412, "groupID": 1, "userID": 1, "userRatio": 1 },
+    { "monthID": 202412, "groupID": 1, "userID": 2, "userRatio": 1 },
+    { "monthID": 202412, "groupID": 1, "userID": 3, "userRatio": 1.5 },
+    
+    { "monthID": 202501, "groupID": 1, "userID": 1, "userRatio": 1 },
+    { "monthID": 202501, "groupID": 1, "userID": 2, "userRatio": 1 },
+    { "monthID": 202501, "groupID": 1, "userID": 3, "userRatio": 1.5 },
+    
+    { "monthID": 202502, "groupID": 1, "userID": 1, "userRatio": 1 },
+    { "monthID": 202502, "groupID": 1, "userID": 2, "userRatio": 1 },
+    { "monthID": 202502, "groupID": 1, "userID": 3, "userRatio": 1.5 },
+    
+    { "monthID": 202503, "groupID": 1, "userID": 1, "userRatio": 1 },
+    { "monthID": 202503, "groupID": 1, "userID": 2, "userRatio": 1 },
+    { "monthID": 202503, "groupID": 1, "userID": 3, "userRatio": 1.5 }
   ],
-  "electricMeterReadings": [
-    { "readingID": 1, "billID": 1, "userID": 1, "meterReading": 110 },
-    { "readingID": 2, "billID": 1, "userID": 2, "meterReading": 120 },
-    { "readingID": 3, "billID": 1, "userID": 3, "meterReading": 130 },
-    { "readingID": 4, "billID": 1, "userID": 4, "meterReading": 140 },
-    { "readingID": 5, "billID": 1, "userID": 5, "meterReading": 150 },
-    { "readingID": 6, "billID": 2, "userID": 1, "meterReading": 160 },
-    { "readingID": 7, "billID": 2, "userID": 2, "meterReading": 170 },
-    { "readingID": 8, "billID": 2, "userID": 3, "meterReading": 180 },
-    { "readingID": 9, "billID": 2, "userID": 4, "meterReading": 190 },
-    { "readingID": 10, "billID": 2, "userID": 5, "meterReading": 200 }
-  ],
-  "electricBillShares": [
-    { "billShareID": 1, "billID": 1, "userID": 1, "shareAmount": 30 },
-    { "billShareID": 2, "billID": 1, "userID": 2, "shareAmount": 30 },
-    { "billShareID": 3, "billID": 1, "userID": 3, "shareAmount": 30 },
-    { "billShareID": 4, "billID": 1, "userID": 4, "shareAmount": 30 },
-    { "billShareID": 5, "billID": 1, "userID": 5, "shareAmount": 30 },
-    { "billShareID": 6, "billID": 2, "userID": 1, "shareAmount": 40 },
-    { "billShareID": 7, "billID": 2, "userID": 2, "shareAmount": 40 },
-    { "billShareID": 8, "billID": 2, "userID": 3, "shareAmount": 40 },
-    { "billShareID": 9, "billID": 2, "userID": 4, "shareAmount": 40 },
-    { "billShareID": 10, "billID": 2, "userID": 5, "shareAmount": 40 }
+  "ElectricMeterReadings": [
+    { "monthID": 202409, "groupID": 1, "userID": 1, "meterReading": 150 },
+    { "monthID": 202410, "groupID": 1, "userID": 1, "meterReading": 165 },
+    { "monthID": 202411, "groupID": 1, "userID": 1, "meterReading": 177 },
+    { "monthID": 202412, "groupID": 1, "userID": 1, "meterReading": 195 },
+    { "monthID": 202501, "groupID": 1, "userID": 1, "meterReading": 206 },
+    { "monthID": 202502, "groupID": 1, "userID": 1, "meterReading": 223 },
+    { "monthID": 202503, "groupID": 1, "userID": 1, "meterReading": 237 },
+    
+    { "monthID": 202409, "groupID": 1, "userID": 2, "meterReading": 130 },
+    { "monthID": 202410, "groupID": 1, "userID": 2, "meterReading": 150 },
+    { "monthID": 202411, "groupID": 1, "userID": 2, "meterReading": 165 },
+    { "monthID": 202412, "groupID": 1, "userID": 2, "meterReading": 175 },
+    { "monthID": 202501, "groupID": 1, "userID": 2, "meterReading": 187 },
+    { "monthID": 202502, "groupID": 1, "userID": 2, "meterReading": 205 },
+    { "monthID": 202503, "groupID": 1, "userID": 2, "meterReading": 216 },
+    
+    { "monthID": 202409, "groupID": 1, "userID": 3, "meterReading": 180 },
+    { "monthID": 202410, "groupID": 1, "userID": 3, "meterReading": 193 },
+    { "monthID": 202411, "groupID": 1, "userID": 3, "meterReading": 210 },
+    { "monthID": 202412, "groupID": 1, "userID": 3, "meterReading": 222 },
+    { "monthID": 202501, "groupID": 1, "userID": 3, "meterReading": 238 },
+    { "monthID": 202502, "groupID": 1, "userID": 3, "meterReading": 252 },
+    { "monthID": 202503, "groupID": 1, "userID": 3, "meterReading": 271 },
+    
+    { "monthID": 202409, "groupID": 2, "userID": 1, "meterReading": 140 },
+    { "monthID": 202410, "groupID": 2, "userID": 1, "meterReading": 151 },
+    { "monthID": 202411, "groupID": 2, "userID": 1, "meterReading": 167 },
+    { "monthID": 202412, "groupID": 2, "userID": 1, "meterReading": 177 },
+    { "monthID": 202501, "groupID": 2, "userID": 1, "meterReading": 197 },
+    { "monthID": 202502, "groupID": 2, "userID": 1, "meterReading": 212 },
+    { "monthID": 202503, "groupID": 2, "userID": 1, "meterReading": 224 },
+    
+    { "monthID": 202409, "groupID": 2, "userID": 2, "meterReading": 120 },
+    { "monthID": 202410, "groupID": 2, "userID": 2, "meterReading": 134 },
+    { "monthID": 202411, "groupID": 2, "userID": 2, "meterReading": 152 },
+    { "monthID": 202412, "groupID": 2, "userID": 2, "meterReading": 163 },
+    { "monthID": 202501, "groupID": 2, "userID": 2, "meterReading": 176 },
+    { "monthID": 202502, "groupID": 2, "userID": 2, "meterReading": 193 },
+    { "monthID": 202503, "groupID": 2, "userID": 2, "meterReading": 203 }
   ]
 }
