@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spltrweb/static/css/main.92300052.css",
+    "main.js": "/spltrweb/static/js/main.3ca3f1f9.js",
+    "index.html": "/spltrweb/index.html",
+    "main.92300052.css.map": "/spltrweb/static/css/main.92300052.css.map",
+    "main.3ca3f1f9.js.map": "/spltrweb/static/js/main.3ca3f1f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92300052.css",
+    "static/js/main.3ca3f1f9.js"
+  ]
+}
